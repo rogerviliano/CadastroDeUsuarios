@@ -18,6 +18,7 @@ public class UserModel {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
     private String nome;
+    @Column(unique = true) //indica que nao pode haver dois registros iguais no BD para esta coluna
     private String email;
     private int idade;
     //Indica que N users podem ter Uma Atividade
