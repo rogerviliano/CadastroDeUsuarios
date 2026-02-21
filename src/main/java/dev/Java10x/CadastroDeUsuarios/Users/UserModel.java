@@ -1,5 +1,6 @@
 package dev.Java10x.CadastroDeUsuarios.Users;
 
+import dev.Java10x.CadastroDeUsuarios.Atividades.AtividadeModel;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -13,7 +14,10 @@ public class UserModel {
     private String nome;
     private String email;
     private int idade;
-    private List<AtividadeModel> atividades;
+    //Indica que N user podem ter Uma Atividade
+    @ManyToOne
+    @JoinColumn(name="atividade_id")
+    private AtividadeModel atividades;
     public UserModel() {
     }
 
