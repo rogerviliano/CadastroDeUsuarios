@@ -1,17 +1,19 @@
-package dev.Java10x.CadastroDeUsuarios;
+package dev.Java10x.CadastroDeUsuarios.Users;
 
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name="tb_cadastro_usuarios")
 public class UserModel {
     @Id
-    @GeneratedValue(estrategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String email;
     private int idade;
-
+    private List<AtividadeModel> atividades;
     public UserModel() {
     }
 
