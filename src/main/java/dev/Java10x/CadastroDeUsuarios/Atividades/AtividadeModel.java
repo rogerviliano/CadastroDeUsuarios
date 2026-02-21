@@ -3,11 +3,17 @@ package dev.Java10x.CadastroDeUsuarios.Atividades;
 
 import dev.Java10x.CadastroDeUsuarios.Users.UserModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
 @Table(name="tb_atividades")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class AtividadeModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,7 +21,8 @@ public class AtividadeModel {
     private String nome;
     private String descricao;
     //@OneToMany - Indicando que Uma atividade pode contar N Users
-    @OneToMany(mappedBy = "atividades")//mapeando a chave estrangeira, indicando a qual coluna se relaciona este atributo
+    //mapeando a chave estrangeira, indicando a qual coluna se relaciona este atributo
+    @OneToMany(mappedBy = "atividades")
     private List<UserModel> usuario;
 
 }
