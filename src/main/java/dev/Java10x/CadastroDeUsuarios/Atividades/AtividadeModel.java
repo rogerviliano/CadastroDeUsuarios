@@ -17,8 +17,11 @@ import java.util.List;
 public class AtividadeModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id_usuario")
     private Long id;
+    @Column(name = "nome_usuario")
     private String nome;
+    @Column(name = "descricao_atividade")
     private String descricao;
     //@OneToMany - Indicando que Uma atividade pode contar N Users
     //mapeando a chave estrangeira, indicando a qual coluna se relaciona este atributo
