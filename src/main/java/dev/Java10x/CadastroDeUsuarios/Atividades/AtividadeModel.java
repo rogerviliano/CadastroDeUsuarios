@@ -17,9 +17,9 @@ import java.util.List;
 public class AtividadeModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id_usuario")
+    @Column(name="id_atividdade")
     private Long id;
-    @Column(name = "nome_usuario")
+    @Column(name = "nome_atividade")
     private String nome;
     @Column(name = "descricao_atividade")
     private String descricao;
