@@ -20,7 +20,7 @@ public class UserController { // A camada Controller detem os endpoints da API -
     }
     //Mostrar ou pesquisar Usuario por _id (Read)
     @GetMapping("/todosPorID")
-    public String mostrarTodosUsuarios() {
+    public String mostrarUsuario() {
         return "Mostrando ninja por ID";
     }
     //Mostrar todos os usuarios (Read)
